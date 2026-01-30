@@ -1,0 +1,54 @@
+# Employee Management System (EMS)
+
+The **Employee Management System (EMS)** is a full-stack web application designed to manage employees and departments within a company. Admins can manage employees, departments, and leave requests, while employees can view their profiles, apply for leave, and track leave history. The system uses a REST API architecture for communication between the frontend and backend.
+
+## Key Features
+
+- **Admin**
+  - Add, edit, delete, and view employees, departments, and leaves.
+- **Employee**
+  - View profile, apply for leave, and check leave status/history.
+- **Authentication**
+  - Secure login/logout with role-based access (admin or employee).
+- **UI**
+  - Minimal interface with text boxes, buttons, and tables for easy interaction.
+
+## Tech Stack
+
+- **Frontend:** React.js with Axios for API calls  
+- **Backend:** Laravel 10 REST API with Sanctum for authentication  
+- **Database:** MySQL  
+- **Optional:** Email notifications via SMTP/Mailtrap  
+
+## Database Design
+
+- **users** – authentication and roles  
+- **departments** – department details  
+- **employees** – employee profiles linked to users and departments  
+- **leaves** – leave requests with status tracking  
+
+## Backend API Endpoints
+
+- **Authentication:** `/api/register`, `/api/login`, `/api/logout`  
+- **Departments:** CRUD operations (`/api/departments`)  
+- **Employees:** CRUD operations (`/api/employees`)  
+- **Leaves:** CRUD operations (`/api/leaves`)  
+
+## Frontend Structure
+
+- **LoginPage:** Login form for authentication  
+- **AdminDashboard:** Employee, department, and leave management tables with CRUD buttons  
+- **EmployeeDashboard:** Profile view, leave request form, and leave history table  
+- **Forms:** EmployeeForm, DepartmentForm, LeaveForm for input and validation  
+
+## Highlights
+
+- API-based communication ensures separation of concerns between frontend and backend.  
+- Minimal UI focuses on functionality; styling can be added later.  
+- Prepared for future CI/CD integration to automate testing and deployment.
+
+## Installation (Optional)
+
+1. Clone the repo:
+```bash
+git clone <your-repo-url>
